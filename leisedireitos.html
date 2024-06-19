@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site informativo sobre TEA">
     <meta keywords="TEA, Desenvolvimento, Autoestima">
+    <link rel="icon" href="./img/VectorLoguinho2.0.svg" type="image/svg+xml">
     <title>Leis e Direitos</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="/estilos/leisedireitos.css">
+    <script>
+        function openCity(evt, cityName) {
+            // declaração de todas as vareaveis
+            var i, tabcontent, tablinks;
+
+            // Pega todos elementos como class="tabcontent"
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Pega todos os elementos com class="tablinks e remove a classe "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Mostra o tab selecionado, e adiciona uma class "active" para os botões que forem abertos no tab  
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
             <div class="logo">
-                <img src="img/VectorLogo.svg">
+                <img src="img/logo_001-removebg-preview.png">
             </div>
             <div class="nav-list">
 
@@ -37,44 +60,7 @@
     </div>
     <main>
 
-        <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-9394-1996_84003.html">Lei de
-                Diretrizes e Bases da Educação Nacional</a> (Lei n. 9394), aprovada em
-            1996,
-            estabelece as bases da educação nacional no Brasil e preconiza o acesso à educação inclusiva para todos,
-            incluindo pessoas com autismo.</p>
-        <p class="principal">Embora não sendo específica para o autismo, a <a class="link"
-                href="https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-republicacaoatualizada-27086-pl.html">Lei
-                de Cotas</a> (Lei n. 8213/1991) reserva uma
-            porcentagem de
-            vagas de emprego para pessoas com deficiência, o que inclui autistas, em empresas com mais de 100
-            funcionários.</p>
-        <p class="principal">Adotada pela ONU em 2006 e ratificada pelo Brasil em 2008, a Convenção sobre os Direitos
-            das Pessoas com
-            Deficiência (CDPD) estabelece princípios e direitos fundamentais para pessoas com deficiência, incluindo
-            autismo.</p>
-        <p class="principal">A Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência
-            - Lei n.
-            13146/2015), também conhecida como <a class="link"
-                href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13146.htm">Estatuto da Pessoa com
-                Deficiência</a>, é um marco importante
-            na legislação
-            brasileira relacionada à inclusão e proteção dos direitos das pessoas com deficiência, incluindo autistas.
-        </p>
-        <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-12764-2012_358777.html">Lei Berenice
-                Piana</a> (12764/2012) criou a Política Nacional de Proteção dos Direitos da
-            Pessoa com Transtorno
-            do Espectro Autista, que determina o direito dos autistas a um diagnóstico precoce, tratamento, terapias e
-            medicamento pelo Sistema Único de Saúde; o acesso à educação e à proteção social; ao trabalho e a serviços
-            que propiciem a igualdade de oportunidades. Esta lei também estipula que a pessoa com transtorno do espectro
-            autista é considerada pessoa com deficiência, para todos os efeitos legais.</p>
-
-        <!--<h2>A história do Autismo</h2>-->
-        <p class="principal"> A <a class="link" href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L13977.htm">Lei
-                13977/2020</a>, também conhecida como Lei Romeo Mion, cria a Carteira de Identificação
-            da Pessoa com Transtorno do Espectro Autista (Ciptea), visando assegurar atenção integral e prioritária a
-            esse grupo tão importante da sociedade.</p>
-
-        <h2 class="subtitulo">O que prevê a Lei?</h2>
+        <h2 class="subtitulo">O que promove as Leis?</h2>
 
         <p class="principal">A Ciptea tem como objetivo proporcionar às pessoas com TEA um atendimento adequado e
             prioritário nos serviços
@@ -93,21 +79,71 @@
             10.741/2003). Além
             destas políticas públicas mais abrangentes, vale destacar algumas legislações que regulam questões mais
             específicas do cotidiano.</p>
-        <p class="principal"><a class="link"
-                href="https://www2.camara.leg.br/legin/fed/lei/2016/lei-13370-12-dezembro-2016-784017-publicacaooriginal-151541-pl.html">A
-                Lei 13.370/2016</a> reduz a jornada de trabalho de servidores públicos com filhos autistas.
-            A autorização tira
-            a necessidade de compensação ou redução de vencimentos para os funcionários públicos federais que são pais
-            de pessoas com TEA.</p>
-        <p class="principal"><a class="link"
-                href="https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.pdf">
-                A Lei 8.742/93</a>, conhecida como Lei Orgânica da Assistência
-            Social
-            (Loas), oferece o Benefício da Prestação
-            Continuada (BPC). Para ter direito ao BPC o TEA deve ser permanente e a renda per capita familiar deve ser
-            inferior a 1/4 do salário mínimo vigente. O benefício é pago pelo governo federal e tem o objetivo de
-            garantir a subsistência e a inclusão social dessas pessoas.</p>
 
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'leiA')">Leis Nacionais</button>
+                <button class="tablinks" onclick="openCity(event, 'leiB')">Berenice</button>
+                <button class="tablinks" onclick="openCity(event, 'leiC')">Trabalhistas</button>
+            </div>
+
+            <div id="leiA" class="tabcontent">
+                <h2 class="subtitulo">Leis Nacionais</h2>
+             
+             <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-9394-1996_84003.html">Lei de
+                    Diretrizes e Bases da Educação Nacional</a> (Lei n. 9394), aprovada em
+                1996,
+                estabelece as bases da educação nacional no Brasil e preconiza o acesso à educação inclusiva para todos,
+                incluindo pessoas com autismo.</p>
+                
+                <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-9394-1996_84003.html">Lei de
+                    Diretrizes e Bases da Educação Nacional</a> (Lei n. 9394), aprovada em
+                    1996,
+                    estabelece as bases da educação nacional no Brasil e preconiza o acesso à educação inclusiva para todos,
+                    incluindo pessoas com autismo.</p>
+
+                    <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-9394-1996_84003.html">Lei de
+                        Diretrizes e Bases da Educação Nacional</a> (Lei n. 9394), aprovada em
+                        1996,
+                        estabelece as bases da educação nacional no Brasil e preconiza o acesso à educação inclusiva para todos,
+                        incluindo pessoas com autismo.</p>
+
+                        <p class="principal">A Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência
+                            - Lei n.
+                            13146/2015), também conhecida como <a class="link"
+                                href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13146.html">Estatuto da Pessoa com
+                                Deficiência</a>, é um marco importante
+                            na legislação
+                            brasileira relacionada à inclusão e proteção dos direitos das pessoas com deficiência, incluindo autistas.
+                            </p>
+            </div>
+            <div id="leiB" class="tabcontent">
+                <h2 class="subtitulo">Berenice</h2>
+                <p class="principal">A <a class="link" href="https://www.normasbrasil.com.br/norma/lei-12764-2012_358777.html">Lei Berenice
+                    Piana</a> (12764/2012) criou a Política Nacional de Proteção dos Direitos da
+                Pessoa com Transtorno
+                do Espectro Autista, que determina o direito dos autistas a um diagnóstico precoce, tratamento, terapias e
+                medicamento pelo Sistema Único de Saúde; o acesso à educação e à proteção social; ao trabalho e a serviços
+                que propiciem a igualdade de oportunidades. Esta lei também estipula que a pessoa com transtorno do espectro
+                autista é considerada pessoa com deficiência, para todos os efeitos legais.</p>
+            </div>
+
+            <div id="leiC" class="tabcontent">
+                <h2 class="subtitulo">Trabalhistas</h2>
+                <p class="principal"><a class="link"
+                    href="https://www2.camara.leg.br/legin/fed/lei/2016/lei-13370-12-dezembro-2016-784017-publicacaooriginal-151541-pl.html">A
+                    Lei 13.370/2016</a> reduz a jornada de trabalho de servidores públicos com filhos autistas.
+                A autorização tira
+                a necessidade de compensação ou redução de vencimentos para os funcionários públicos federais que são pais
+                de pessoas com TEA.</p>
+                <p class="principal"><a class="link"
+                    href="https://www2.camara.leg.br/legin/fed/lei/1993/lei-8742-7-dezembro-1993-363163-normaatualizada-pl.pdf">
+                    A Lei 8.742/93</a>, conhecida como Lei Orgânica da Assistência
+                Social
+                (Loas), oferece o Benefício da Prestação
+                Continuada (BPC). Para ter direito ao BPC o TEA deve ser permanente e a renda per capita familiar deve ser
+                inferior a 1/4 do salário mínimo vigente. O benefício é pago pelo governo federal e tem o objetivo de
+                garantir a subsistência e a inclusão social dessas pessoas.</p>
+            </div>
     </main>
     <footer>
         <div class="sitemap">
@@ -133,7 +169,7 @@
             <h3>Redes Sociais</h3>
             <ul>
                 <li><a href="#"><img src="img/facebook.png" alt="Facebook" width="20px" height="20px;"></a></li>
-                <li><a href="#"><img src="img/instagram (1)_Easy-Resize.com (2).jpg" alt="Instagram" width="20px"
+                <li><a href="#"><img src="img/instagram__1__Easy-Resize.com__2_-removebg-preview.png" alt="Instagram" width="20px"
                             height="20px;"></a></li>
             </ul>
         </div>
@@ -141,3 +177,9 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+
